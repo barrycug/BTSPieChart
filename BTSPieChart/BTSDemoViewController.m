@@ -3,7 +3,7 @@
 //  TouchPie
 //
 //  Created by Brian Coyner on 9/6/11.
-//  Copyright (c) 2011 Black Software, Inc. All rights reserved.
+//  Copyright (c) 2011 Brian Coyner. All rights reserved.
 //
 
 #import "BTSDemoViewController.h"

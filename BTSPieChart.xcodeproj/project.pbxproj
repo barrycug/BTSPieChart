@@ -18,6 +18,7 @@
 		5D28123114494CC800D248AC /* BTSPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D28122D14494CC800D248AC /* BTSPieView.m */; };
 		5D28123314494CED00D248AC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D28123214494CED00D248AC /* MainStoryboard.storyboard */; };
 		5D28123514494D1700D248AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28123414494D1700D248AC /* QuartzCore.framework */; };
+		5D28123B14494E2E00D248AC /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D28123A14494E2E00D248AC /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		5D28122D14494CC800D248AC /* BTSPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSPieView.m; sourceTree = "<group>"; };
 		5D28123214494CED00D248AC /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5D28123414494D1700D248AC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5D28123A14494E2E00D248AC /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		5D2811FA14494C8500D248AC = {
 			isa = PBXGroup;
 			children = (
+				5D28123A14494E2E00D248AC /* readme.md */,
 				5D28120F14494C8500D248AC /* BTSPieChart */,
 				5D28120814494C8500D248AC /* Frameworks */,
 				5D28120614494C8500D248AC /* Products */,
@@ -165,6 +168,7 @@
 				5D28121414494C8500D248AC /* InfoPlist.strings in Resources */,
 				5D28123014494CC800D248AC /* BTSPieView-Info.plist in Resources */,
 				5D28123314494CED00D248AC /* MainStoryboard.storyboard in Resources */,
+				5D28123B14494E2E00D248AC /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +288,7 @@
 				5D28122514494C8500D248AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
