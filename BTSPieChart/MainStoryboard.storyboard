@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="1Hx-1B-RfJ">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="4Wp-RQ-YaB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aT8-k7-Vgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="1Hx-1B-RfJ" customClass="BTSDemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4JY-Sj-71h">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="h2g-cL-COv" customClass="BTSPieView">
+                                <rect key="frame" x="20" y="20" width="728" height="661"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="GmU-Sj-ilf">
+                                <rect key="frame" x="364" y="745" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="updateSliceCount:" destination="1Hx-1B-RfJ" eventType="valueChanged" id="xIR-QY-h72"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Slices" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ffx-hl-m1P">
+                                <rect key="frame" x="310" y="748" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Selected Slice Value" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="47F-Mu-yBx">
+                                <rect key="frame" x="200" y="791" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Animation Speed (seconds)" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="7o0-Mw-o8i">
+                                <rect key="frame" x="147" y="855" width="209" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" minimumFontSize="10" id="wuA-dN-YqQ">
+                                <rect key="frame" x="466" y="747" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" minimumFontSize="10" id="b4w-TR-szN">
+                                <rect key="frame" x="578" y="791" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" minimumFontSize="10" id="bVV-qB-Vls">
+                                <rect key="frame" x="578" y="855" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.20000000000000001" maxValue="5" id="X1R-zG-OTT">
+                                <rect key="frame" x="362" y="855" width="205" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="updateAnimationSpeed:" destination="1Hx-1B-RfJ" eventType="valueChanged" id="rx6-Ey-LUZ"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="100" continuous="NO" id="Yy2-5a-BWD">
+                                <rect key="frame" x="362" y="791" width="205" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="updateSelectedSliceValue:" destination="1Hx-1B-RfJ" eventType="valueChanged" id="2aB-YI-hzb"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="_animationSpeedLabel" destination="bVV-qB-Vls" id="fz0-2l-Hnc"/>
+                        <outlet property="_animationSpeedSlider" destination="X1R-zG-OTT" id="OBz-cT-BGn"/>
+                        <outlet property="_selectedSliceValueLabel" destination="b4w-TR-szN" id="3gg-IN-mNb"/>
+                        <outlet property="_selectedSliceValueSlider" destination="Yy2-5a-BWD" id="dzy-CO-QSf"/>
+                        <outlet property="_sliceCountLabel" destination="wuA-dN-YqQ" id="xfp-ea-oOJ"/>
+                        <outlet property="_sliceStepper" destination="GmU-Sj-ilf" id="zm8-eq-Hxh"/>
+                        <outlet property="pieView" destination="h2g-cL-COv" id="4fn-Ck-4TA"/>
+                        <outlet property="view" destination="4JY-Sj-71h" id="fQz-jY-Uxf"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-273" y="-456"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BTSDemoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTSDemoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="updateAnimationSpeed:"/>
+                <relationship kind="action" name="updateSelectedSliceValue:"/>
+                <relationship kind="action" name="updateSliceCount:"/>
+                <relationship kind="outlet" name="_animationSpeedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_animationSpeedSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="_selectedSliceValueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_selectedSliceValueSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="_sliceCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_sliceStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="pieView" candidateClass="BTSPieView"/>
+            </relationships>
+        </class>
+        <class className="BTSPieView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTSPieView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
