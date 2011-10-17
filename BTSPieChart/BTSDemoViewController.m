@@ -10,8 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 
 //
-// This is a hack view controller used to display and control a BTSPieView chart view. 
-//
+// This is a very simple view controller used to display and control a BTSPieView chart view. 
+// 
 // NOTE: This view controller restricts various interactions with the pie view. 
 //       Specifically, there must be a valid selection to delete a pie wedge. You will 
 //       notice that after every deletion we clear the view controller's selection index. 
@@ -19,10 +19,9 @@
 //       issues with this version of the BTSPieView. 
 //
 // Please keep in mind that the whole purpose of this app is to demonstrate a technique 
-// for animating pie charts. This version of the BTSPieView is not meant for production
+// for animating pie charts. This _public version_ of the BTSPieView is not meant for production
 // use. Of course, you are more than welcome to take the ideas presented here and 
 // develop your own pie chart view. 
-
 
 @interface BTSDemoViewController() <BTSPieViewDataSource, BTSPieViewDelegate> {
     
@@ -66,16 +65,16 @@
     
     [_sliceStepper setValue:0];
     [self updateSliceCount:_sliceStepper];
+
+    // start with a blank slate
     _slices = [[NSMutableArray alloc] init];
-    
-    // start off with no selection.
     _selectedSliceIndex = -1;
     
     // set up the data source and delegate
     [_pieView setDataSource:self];
     [_pieView setDelegate:self];
     
-    // must divide by 255.0F... RBG values are between 1.0 and 0.0
+    // Must divide by 255.0F... RBG values are between 1.0 and 0.0
     NSArray *colors = [NSArray arrayWithObjects:
                        [UIColor colorWithRed:93/255.0 green:150/255.0 blue:72/255.0 alpha:1.0], 
                        [UIColor colorWithRed:46/255.0 green:87/255.0 blue:140/255.0 alpha:1.0], 
@@ -86,10 +85,10 @@
                        [UIColor colorWithRed:65/255.0 green:105/255.0 blue:155/255.0 alpha:1.0], 
                        [UIColor colorWithRed:110/255.0 green:64/255.0 blue:190/255.0 alpha:1.0], nil];
   
-    // the pie view cycles through the colors. 
+    // the BTSPieView cycles through the colors. 
     [_pieView setSliceColors:colors];
     
-    // tell the pie view we have data
+    // tell the pie view we have data (animates)
     [_pieView reloadData];
 }
 
@@ -136,10 +135,10 @@
 {
     NSLog(@"didSelectSliceAtIndex: %d", index);  
     
-    // store off the index the user selected.
+    // save the index the user selected.
     _selectedSliceIndex = index;
     
-    // update the UI
+    // update the selected slice UI components with the model values
     [_selectedSliceValueLabel setText:[NSString stringWithFormat:@"%@", [_slices objectAtIndex:index]]];
     [_selectedSliceValueSlider setValue:[[_slices objectAtIndex:index] floatValue]];
     
@@ -149,8 +148,7 @@
     
     CAShapeLayer *selectedLayer = [[[_pieView layer] sublayers] objectAtIndex:index];
     UIColor *sliceColor = [UIColor colorWithCGColor:[selectedLayer fillColor]];
-    
-    // Selection is tracked by changing the slider track tint to the color of the selected pie wedge.
+
     [_selectedSliceValueSlider setEnabled:YES];
     [_selectedSliceValueSlider setMinimumTrackTintColor:sliceColor];
     [_selectedSliceValueSlider setMaximumTrackTintColor:sliceColor];
@@ -170,7 +168,6 @@
     
     // nothing is selected... so turn off the "selected value" controls
     _selectedSliceIndex = -1;
-
     [_selectedSliceValueSlider setEnabled:NO];
     [_selectedSliceValueSlider setValue:0.0];
     [_selectedSliceValueLabel setAlpha:0.0];
@@ -187,19 +184,20 @@
     
     [_sliceCountLabel setText:[NSString stringWithFormat:@"%d", sliceCount]];
     
-    if ([_slices count] < sliceCount) {
+    if ([_slices count] < sliceCount) { // "+" pressed
         
         // add a new value and tell the pie view to reload (this animates).
         [_slices addObject:[NSNumber numberWithDouble:10.0]];        
         [_pieView reloadData];
-    } else if ([_slices count] > sliceCount) {
+    } else if ([_slices count] > sliceCount) { // "-" pressed
 
-        // The user wants to remove the selected layer. We only allow the user to remove a selected layer. 
+        // The user wants to remove the selected layer. We only allow the user to remove a selected layer
+        // if there is a known selection.
         if (_selectedSliceIndex > -1) {
 
             [_slices removeObjectAtIndex:_selectedSliceIndex];
             
-            // as mentioned in the class level notes, any time a wedge is deleted the view controller's
+            // As mentioned in the class level notes, any time a wedge is deleted the view controller's
             // selection index is set to -1 (no selection). This keeps the user from pressing the "-" 
             // stepper button really fast and causing the pie view to go nuts. Yes, this is a problem 
             // with this version of the BTSPieView.
@@ -208,7 +206,7 @@
             [_pieView reloadData];
         } else {
             
-            // no selection... reset the stepper... do nothing.
+            // no selection... reset the stepper... no need to reload the pie view.
             [_sliceStepper setValue:sliceCount + 1];
             [self updateSliceCount:_sliceStepper];
         }

@@ -16,9 +16,8 @@
 
 @property (nonatomic, assign) id<BTSPieViewDataSource> dataSource;
 @property (nonatomic, assign) id<BTSPieViewDelegate> delegate;
+
 @property (nonatomic, assign) CGFloat animationSpeed;
-@property (nonatomic, assign) CGFloat startAngle;
-@property (nonatomic, assign) BOOL animate;
 @property (nonatomic, copy) NSArray *sliceColors;
 
 // causes the pie chart to recalculate the slices (and animate)

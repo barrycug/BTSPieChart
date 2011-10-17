@@ -14,7 +14,6 @@
 		5D28121614494C8500D248AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D28121514494C8500D248AC /* main.m */; };
 		5D28122E14494CC800D248AC /* BTSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D28122714494CC800D248AC /* BTSAppDelegate.m */; };
 		5D28122F14494CC800D248AC /* BTSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D28122914494CC800D248AC /* BTSDemoViewController.m */; };
-		5D28123014494CC800D248AC /* BTSPieView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D28122A14494CC800D248AC /* BTSPieView-Info.plist */; };
 		5D28123114494CC800D248AC /* BTSPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D28122D14494CC800D248AC /* BTSPieView.m */; };
 		5D28123314494CED00D248AC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D28123214494CED00D248AC /* MainStoryboard.storyboard */; };
 		5D28123514494D1700D248AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28123414494D1700D248AC /* QuartzCore.framework */; };
@@ -34,7 +33,6 @@
 		5D28122714494CC800D248AC /* BTSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSAppDelegate.m; sourceTree = "<group>"; };
 		5D28122814494CC800D248AC /* BTSDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSDemoViewController.h; sourceTree = "<group>"; };
 		5D28122914494CC800D248AC /* BTSDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSDemoViewController.m; sourceTree = "<group>"; };
-		5D28122A14494CC800D248AC /* BTSPieView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BTSPieView-Info.plist"; sourceTree = "<group>"; };
 		5D28122B14494CC800D248AC /* BTSPieView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BTSPieView-Prefix.pch"; sourceTree = "<group>"; };
 		5D28122C14494CC800D248AC /* BTSPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSPieView.h; sourceTree = "<group>"; };
 		5D28122D14494CC800D248AC /* BTSPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSPieView.m; sourceTree = "<group>"; };
@@ -95,8 +93,6 @@
 				5D28122714494CC800D248AC /* BTSAppDelegate.m */,
 				5D28122814494CC800D248AC /* BTSDemoViewController.h */,
 				5D28122914494CC800D248AC /* BTSDemoViewController.m */,
-				5D28122A14494CC800D248AC /* BTSPieView-Info.plist */,
-				5D28122B14494CC800D248AC /* BTSPieView-Prefix.pch */,
 				5D28122C14494CC800D248AC /* BTSPieView.h */,
 				5D28122D14494CC800D248AC /* BTSPieView.m */,
 				5D28121014494C8500D248AC /* Supporting Files */,
@@ -107,6 +103,7 @@
 		5D28121014494C8500D248AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D28122B14494CC800D248AC /* BTSPieView-Prefix.pch */,
 				5D28121114494C8500D248AC /* BTSPieChart-Info.plist */,
 				5D28121214494C8500D248AC /* InfoPlist.strings */,
 				5D28121514494C8500D248AC /* main.m */,
@@ -166,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D28121414494C8500D248AC /* InfoPlist.strings in Resources */,
-				5D28123014494CC800D248AC /* BTSPieView-Info.plist in Resources */,
 				5D28123314494CED00D248AC /* MainStoryboard.storyboard in Resources */,
 				5D28123B14494E2E00D248AC /* readme.md in Resources */,
 			);
