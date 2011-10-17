@@ -13,15 +13,11 @@
 // This is a very simple view controller used to display and control a BTSPieView chart view. 
 // 
 // NOTE: This view controller restricts various interactions with the pie view. 
-//       Specifically, there must be a valid selection to delete a pie wedge. You will 
-//       notice that after every deletion we clear the view controller's selection index. 
-//       This keeps the user from pressing the "-" button really fast, which causes 
-//       issues with this version of the BTSPieView. 
+//       Specifically, there must be a valid selection to delete a pie wedge. The selection 
+//       is cleared after every deletion. This keeps the user from pressing the "-" button 
+//       really fast, which causes issues with this version of the BTSPieView. 
 //
-// Please keep in mind that the whole purpose of this app is to demonstrate a technique 
-// for animating pie charts. This _public version_ of the BTSPieView is not meant for production
-// use. Of course, you are more than welcome to take the ideas presented here and 
-// develop your own pie chart view. 
+// Please see BTSPieChart.m for additional notes.
 
 @interface BTSDemoViewController() <BTSPieViewDataSource, BTSPieViewDelegate> {
     
