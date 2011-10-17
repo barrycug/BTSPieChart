@@ -37,7 +37,7 @@ The view uses a data source (number of slices, slice value) and delegate (select
 ### Notes
 
 - obviously there may be other ways to solve this problem. I find this solution to be easy to understand and implement.
-- this same technique can be applied to other types of paths (e.g. sin waves)
+- this same technique can be applied to other types of paths
  
 ###  Known issues
 
