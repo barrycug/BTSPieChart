@@ -36,8 +36,13 @@ The view uses a data source (number of slices, slice value) and delegate (select
 
 ### Notes
 
-- obviously there may be other ways to solve this problem. I find this solution to be easy to understand and implement.
+- I find this solution to be easy to understand and implement.
 - this same technique can be applied to other types of paths
+
+### Why the use of `NSTimer`?
+
+- Core Animation animates between two arcs (wedges) in a manner that makes the pie chart looks "weird" while animating.
+- The timer gives a hook to capture the layer's interpolated presentation layer values and re-generate a CGPathRef for each `CAShapeLayer`.
  
 ###  Known issues
 
