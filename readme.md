@@ -9,9 +9,7 @@ The pie chart contains the following features:
 - add new slices (animated)
 - remove selected slice (animated)
 - update existing pie values (animated)
-- interactive slice selection 
-
-__NOTE:__ this is NOT a complete "Pie Chart" implementation. The purpose is to demonstrate a technique for building and animating wedges in a pie cart layout. See the _How Does It Work?_ section below. 
+- interactive slice selection (tap and/ or move your finger)
 
 The view uses a data source (number of slices, slice value) and delegate (selection tracking)
 
