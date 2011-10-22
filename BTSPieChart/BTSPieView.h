@@ -15,8 +15,8 @@
 
 @interface BTSPieView : UIView
 
-@property (nonatomic, assign) id<BTSPieViewDataSource> dataSource;
-@property (nonatomic, assign) id<BTSPieViewDelegate> delegate;
+@property (nonatomic, weak) id<BTSPieViewDataSource> dataSource;
+@property (nonatomic, weak) id<BTSPieViewDelegate> delegate;
 
 @property (nonatomic, assign) CGFloat animationSpeed;
 @property (nonatomic, copy) NSArray *sliceColors;
